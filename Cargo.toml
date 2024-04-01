@@ -1,0 +1,11 @@
+# By Nathan McMillan (2023)
+[package]
+name = "cerpton"
+version = "0.1.2"
+edition = "2021"
+authors = ["Nathan McMillan <nathanmcmillan54@gmail.com>"]
+
+[dependencies]
+encoding_rs = "0.8.32"
+#lazy_static = "1.4.0"
+#spin = "0.9.4"
