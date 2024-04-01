@@ -1,1 +1,0 @@
-/home/nathan/Desktop/cerpton/target/debug/cerpton: /home/nathan/Desktop/cerpton/src/alphabet.rs /home/nathan/Desktop/cerpton/src/decode.rs /home/nathan/Desktop/cerpton/src/encode.rs /home/nathan/Desktop/cerpton/src/lib.rs /home/nathan/Desktop/cerpton/src/main.rs /home/nathan/Desktop/cerpton/src/utf.rs
