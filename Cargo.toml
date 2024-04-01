@@ -9,5 +9,10 @@ documentation = "https://docs.rs/cerpton"
 license = "MIT"
 readme = "README.md"
 
+[lib]
+name = "cerpton"
+edition = "2021"
+path = "src/lib.rs"
+
 [dependencies]
 encoding_rs = "0.8.32"
