@@ -4,6 +4,10 @@ name = "cerpton"
 version = "0.1.2"
 edition = "2021"
 authors = ["Nathan McMillan <nathanmcmillan54@gmail.com>"]
+descripton = "A 'double' Caesar Cypher."
+documentation = "https://docs.rs/cerpton"
+license = "MIT"
+readme = "README.md"
 
 [dependencies]
 encoding_rs = "0.8.32"
