@@ -16,26 +16,26 @@ fn main() {
     let output = &args[6];
 
     if encode == &String::from("encode") {
-        //       println!("{}", libcerpton_decode([s1, s2, s3, 0, 0, 0], Box::leak(read_to_string(file).unwrap().into_boxed_str())));
         let mut output_file = File::create(output).unwrap();
         output_file
             .write_fmt(format_args!(
                 "{}",
                 libcerpton_encode(
                     [s1, s2, s3, 0, 0, 0],
-                    Box::leak(read_to_string(file).unwrap().into_boxed_str())
+                    read_to_string(file).unwrap()
                 )
             ))
             .unwrap();
+        println!("Encoded {} and saved to {}", file, output);
     } else if encode == &String::from("decode") {
-        println!("decoding stuff");
         let mut output_file = File::create(output).unwrap();
         output_file.write_fmt(format_args!(
             "{}",
             libcerpton_decode(
                 [s1, s2, s3, 0, 0, 0],
-                Box::leak(read_to_string(file).unwrap().into_boxed_str())
+                read_to_string(file).unwrap()
             )
-        ));
+        )).unwrap();
+        println!("Decoded {} and saved to {}", file, output);
     }
 }

@@ -10,39 +10,37 @@ pub mod utf;
 #[cfg(test)]
 pub mod tests;
 
-#[no_mangle]
-pub extern "C" fn libcerpton_decode(info: [i32; 6], decode: &'static str) -> &'static str {
+pub fn libcerpton_decode(info: [i32; 6], decode: String) -> String {
     let mut decoder = Decoder::new(info[0], info[1]);
 
     decoder.set_decoder();
 
-    let mut decoded_text = decoder.decode(decode.to_string());
+    let mut decoded_text = decoder.decode(decode);
 
     if info[2] > 1 {
         for _ in 0..info[2] {
             decoded_text = decoder.decode(decoded_text);
         }
-        return Box::leak(decoded_text.into_boxed_str());
+        return decoded_text;
     } else {
-        Box::leak(decoded_text.into_boxed_str())
+        decoded_text
     }
 }
 
-#[no_mangle]
-pub extern "C" fn libcerpton_encode(info: [i32; 6], encode: &'static str) -> &'static str {
+pub fn libcerpton_encode(info: [i32; 6], encode: String) -> String {
     let mut encoder = Encoder::new(info[0], info[1]);
 
     encoder.set_alphabet();
 
-    let mut encoded_text = encoder.encode(encode.to_string());
+    let mut encoded_text = encoder.encode(encode);
 
     if info[2] > 1 {
         for _ in 0..info[2] {
             encoded_text = encoder.encode(encoded_text);
         }
 
-        return Box::leak(encoded_text.into_boxed_str());
+        return encoded_text;
     } else {
-        Box::leak(encoded_text.into_boxed_str())
+        encoded_text
     }
 }

@@ -1,10 +1,10 @@
 # By Nathan McMillan (2023)
 [package]
 name = "cerpton"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
-authors = ["Nathan McMillan <nathanmcmillan54@gmail.com>"]
-description = "A double Caesar Cypher."
+authors = ["Nathan McMillan"]
+description = "A 'double' Caesar Cypher."
 documentation = "https://docs.rs/"
 license = "MIT"
 readme = "README.md"

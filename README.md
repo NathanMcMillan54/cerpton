@@ -1,6 +1,3 @@
-## encryption
-## EnCRyPTiON
-## CERPTONnyi
 # Cerpton
 
 A "double" [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher) that contains a mix of different alphabets.
@@ -28,6 +25,6 @@ println!("{} -> {}", regular_text, encoded_text);
 // "This is some text!!!" -> "Sg$غ $غ غ[ШJ KJwKللل"
 
 // Or using a single function:
-let encoded_text = libcerpton_encode([2, 1, 0, 0, 0, 0], &regular_text);
+let encoded_text = libcerpton_encode([2, 1, 0, 0, 0, 0], regular_text);
 ```
 
