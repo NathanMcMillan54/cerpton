@@ -1,9 +1,9 @@
 // By Nathan McMillan (2023)
 use crate::alphabet::*;
-use std::borrow::BorrowMut;
-use std::str::from_utf8;
-use std::thread::sleep;
-use std::time::Duration;
+
+
+
+
 
 /// Cerpton encoder
 pub struct Encoder {
