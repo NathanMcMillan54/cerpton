@@ -14,7 +14,7 @@ const SAMPLE_SETTING2: (i32, i32) = (11, 7);
 fn test_alphabet_encode() {
     let mut encoder = Encoder::new(SAMPLE_SETTING1.0, SAMPLE_SETTING1.1);
     encoder.set_alphabet();
-    assert_eq!(encoder.setting_good(), false);
+    assert_eq!(encoder.setting_good(), true);
 
     let encoded_latin_text = encoder.encode(String::from(LATIN_TEXT));
     let encoded_cyrillic_text = encoder.encode(String::from(CYRILLIC_TEXT));
