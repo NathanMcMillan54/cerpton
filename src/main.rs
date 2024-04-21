@@ -2,7 +2,7 @@ use cerpton::{libcerpton_decode, libcerpton_encode};
 use std::env;
 use std::fs::{read_to_string, File};
 use std::io::Write;
-use std::path::Path;
+
 
 fn main() {
     println!("Cerpton v0.1.2");

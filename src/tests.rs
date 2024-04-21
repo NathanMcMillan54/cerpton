@@ -1,7 +1,7 @@
 // Nathan McMillan (2024)
 use crate::{libcerpton_encode, Decoder, Encoder};
 
-const LATIN_TEXT: &str = "A quick brwon fox jumps over the lazy dog"; // Uses every letter in the latin alphabet
+const LATIN_TEXT: &str = "A quick brown fox jumps over the lazy dog"; // Uses every letter in the latin alphabet
 const CYRILLIC_TEXT: &str = "Я П'ю МЕД"; // "I drink honey"
 const ARABIC_TEXT: &str = "أنا أكل الحبوب"; // Should be: "I eat cereal" 
 
@@ -53,7 +53,7 @@ fn test_multiple_encodes() {
     encoder.set_alphabet();
 
     let encoded_text = encoder.encode(SAMPLE_TEXT.to_string());
-    let multi_encoded_text = libcerpton_encode([SAMPLE_SETTING1.0, SAMPLE_SETTING1.1, 2, 0, 0, 0], SAMPLE_TEXT);
+    let multi_encoded_text = libcerpton_encode([SAMPLE_SETTING1.0, SAMPLE_SETTING1.1, 2, 0, 0, 0], SAMPLE_TEXT.to_string());
 
     assert_ne!(encoded_text, multi_encoded_text);
 }
