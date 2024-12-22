@@ -1,0 +1,8 @@
+[package]
+name = "add_alphabet"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dlcns = { git = "https://github.com/NathanMcMillan54/dlw/" }
+dlwp = { git = "https://github.com/NathanMcMillan54/dlw/" }

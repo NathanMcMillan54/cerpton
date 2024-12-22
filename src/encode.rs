@@ -1,10 +1,6 @@
 // By Nathan McMillan (2023)
 use crate::alphabet::*;
 
-
-
-
-
 /// Cerpton encoder
 pub struct Encoder {
     s1: i32,

@@ -15,5 +15,10 @@ name = "cerpton"
 edition = "2021"
 path = "src/lib.rs"
 
+[workspace]
+members = [ "tools/add_alphabet",
+    "tools/add_alphabet/"
+]
+
 [dependencies]
 encoding_rs = "0.8.32"
